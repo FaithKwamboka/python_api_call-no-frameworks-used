@@ -8,13 +8,13 @@ params={
 }
 qrstring=parse.urlencode(params)
 print(qrstring)
-base_url='https://api.giphy.com/v1/gifs/trending?'
+base_url = 'https://api.giphy.com/v1/gifs/trending?'
 req=request.urlopen(base_url+qrstring)
 details=parse.urlparse(base_url)
 print(details)
 print(type(req))
 
-resp=req.read()
+resp = req.read()
 print(type(resp))
 
 apires=json.loads(resp)
